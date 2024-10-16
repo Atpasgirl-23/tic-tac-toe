@@ -1,0 +1,130 @@
+:root {
+  --color1: #d64045;
+  --color2: #e9fff9;
+  --color3: #9ed8db;
+  --color4: #467599;
+  --color5: #1d3354;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color2);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.toe {
+  background-color: var(--color3);
+  padding: 50px;
+  border-radius: 20px;
+  width: 700px;
+}
+.toe__top {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 25px;
+}
+.toe__score {
+  background-color: white;
+  padding: 10px 0px;
+  width: 100px;
+  text-align: center;
+  border-radius: 15px;
+}
+.toe__body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 600px;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.toe__item {
+  width: calc(100% / 3 - 5px);
+  height: calc(100% / 3 - 5px);
+  background-color: var(--color2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.toe__item:hover {
+  background-color: #b2c5c0;
+}
+
+h2 {
+  color: var(--color5);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+h3 {
+  margin-top: 5px;
+  color: var(--color5);
+  font-size: 16px;
+}
+
+.x {
+  color: var(--color1);
+}
+
+.o {
+  color: var(--color4);
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.356);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+}
+.modal__container {
+  background-color: var(--color2);
+  padding: 50px;
+  width: 300px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.modal__title {
+  text-align: center;
+  font-size: 23px;
+}
+.modal__btn {
+  background-color: var(--color4);
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--color2);
+}
+
+.modal__active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease 1.5s;
+}
